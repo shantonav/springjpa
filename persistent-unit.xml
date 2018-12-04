@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.example.springjpa.springjpa.OprPaymentattemptEntity">
+        <table name="OPR_PAYMENTATTEMPT" schema="EPS" catalog=""/>
+        <id-class class="com.example.springjpa.springjpa.OprPaymentattemptEntityPK"/>
+        <attributes>
+            <id name="merchantid">
+                <column name="MERCHANTID" precision="10"/>
+            </id>
+            <id name="orderid">
+                <column name="ORDERID" precision="10"/>
+            </id>
+            <id name="effortid">
+                <column name="EFFORTID" precision="5"/>
+            </id>
+            <id name="attemptid">
+                <column name="ATTEMPTID" precision="5"/>
+            </id>
+            <basic name="statusdate">
+                <column name="STATUSDATE" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="paymentreference">
+                <column name="PAYMENTREFERENCE" nullable="false" length="20"/>
+            </basic>
+            <basic name="additionalreference">
+                <column name="ADDITIONALREFERENCE" nullable="false" length="20"/>
+            </basic>
+            <basic name="receiveddate">
+                <column name="RECEIVEDDATE" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="contractid">
+                <column name="CONTRACTID" nullable="false" length="10"/>
+            </basic>
+            <basic name="amount">
+                <column name="AMOUNT" nullable="false" precision="2"/>
+            </basic>
+            <basic name="feedbackstatus">
+                <column name="FEEDBACKSTATUS" nullable="false" precision="5"/>
+            </basic>
+            <basic name="julianyear">
+                <column name="JULIANYEAR" nullable="false" length="1"/>
+            </basic>
+            <basic name="julianday">
+                <column name="JULIANDAY" nullable="false" length="3"/>
+            </basic>
+            <basic name="batchnumber">
+                <column name="BATCHNUMBER" nullable="false" precision="2"/>
+            </basic>
+            <basic name="senddate">
+                <column name="SENDDATE" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="onlineauthoriserid">
+                <column name="ONLINEAUTHORISERID" nullable="false" length="12"/>
+            </basic>
+            <basic name="creditdebitindicator">
+                <column name="CREDITDEBITINDICATOR" nullable="false" length="1"/>
+            </basic>
+            <basic name="amountreceived">
+                <column name="AMOUNTRECEIVED" nullable="false" precision="2"/>
+            </basic>
+            <basic name="countrycode">
+                <column name="COUNTRYCODE" nullable="false" length="2"/>
+            </basic>
+            <basic name="requestsource">
+                <column name="REQUESTSOURCE" nullable="false" length="35"/>
+            </basic>
+            <basic name="reference">
+                <column name="REFERENCE" nullable="false" length="30"/>
+            </basic>
+            <basic name="paymentamount">
+                <column name="PAYMENTAMOUNT" nullable="false" precision="2"/>
+            </basic>
+            <basic name="paymentcurrencycode">
+                <column name="PAYMENTCURRENCYCODE" nullable="false" length="3"/>
+            </basic>
+            <basic name="paymentdate">
+                <column name="PAYMENTDATE" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="mac">
+                <column name="MAC" nullable="false" length="32"/>
+            </basic>
+            <basic name="bankmac">
+                <column name="BANKMAC" nullable="false" length="32"/>
+            </basic>
+            <basic name="returnmac">
+                <column name="RETURNMAC" nullable="false" length="64"/>
+            </basic>
+            <basic name="hostedindicator">
+                <column name="HOSTEDINDICATOR" nullable="false" length="1"/>
+            </basic>
+            <basic name="returnurl">
+                <column name="RETURNURL" nullable="false" length="512"/>
+            </basic>
+            <basic name="requestpaymentproductid">
+                <column name="REQUESTPAYMENTPRODUCTID" nullable="false" precision="5"/>
+            </basic>
+            <basic name="requestcountrycode">
+                <column name="REQUESTCOUNTRYCODE" nullable="false" length="2"/>
+            </basic>
+            <basic name="e4Xfeedbackstatus">
+                <column name="E4XFEEDBACKSTATUS" nullable="false" precision="5"/>
+            </basic>
+            <basic name="inprocessflag">
+                <column name="INPROCESSFLAG" nullable="false" precision="5"/>
+            </basic>
+            <basic name="acceptneededindicator">
+                <column name="ACCEPTNEEDEDINDICATOR" nullable="false" precision="5"/>
+            </basic>
+            <basic name="partialpaymentindicator">
+                <column name="PARTIALPAYMENTINDICATOR" nullable="false" precision="1"/>
+            </basic>
+            <basic name="requestamount">
+                <column name="REQUESTAMOUNT" nullable="false" precision="12"/>
+            </basic>
+            <basic name="referenceorigpayment">
+                <column name="REFERENCEORIGPAYMENT" nullable="false" length="30"/>
+            </basic>
+        </attributes>
+    </entity>
+
+
+</entity-mappings>

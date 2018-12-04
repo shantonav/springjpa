@@ -1,0 +1,28 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+    <env:Header>
+        <TrustedSourceAuthenticationHeader xmlns="http://globalcollect.com/webcollect/authentication">
+            <RemoteIP>
+                <IPv4>10.63.30.68</IPv4>
+            </RemoteIP>
+            <Source>API</Source>
+        </TrustedSourceAuthenticationHeader>
+    </env:Header>
+    <env:Body>
+        <GetOrderStatusConnectRequest xmlns="http://globalcollect.com/webcollect/orders">
+            <TestCase xmlns="http://globalcollect.com/webcollect/orders">null</TestCase>
+            <Request xmlns="http://globalcollect.com/webcollect/orders">
+                <Merchant xmlns="http://globalcollect.com/webcollect/orders">
+                    <MerchantId xmlns="http://globalcollect.com/webcollect/orders">1701</MerchantId>
+                    <IPaddress xmlns="http://globalcollect.com/webcollect/orders">10.63.30.68</IPaddress>
+                </Merchant>
+                <Order xmlns="http://globalcollect.com/webcollect/orders">
+                    <EffortID xmlns="http://globalcollect.com/webcollect/orders">1</EffortID>
+                    <AttemptID xmlns="http://globalcollect.com/webcollect/orders">1</AttemptID>
+                    <OrderID xmlns="http://globalcollect.com/webcollect/orders">229743</OrderID>
+                </Order>
+                <RequestSource xmlns="http://globalcollect.com/webcollect/orders">API</RequestSource>
+                <RequestType xmlns="http://globalcollect.com/webcollect/orders">JSON</RequestType>
+            </Request>
+        </GetOrderStatusConnectRequest>
+    </env:Body>
+</env:Envelope>

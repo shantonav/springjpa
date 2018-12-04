@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.example.springjpa.springjpa.OprOrderEntity" table="OPR_ORDER" schema="EPS">
+        <composite-id mapped="true" class="com.example.springjpa.springjpa.OprOrderEntityPK">
+            <key-property name="orderid">
+                <column name="ORDERID" sql-type="number(10)" precision="10"/>
+            </key-property>
+            <key-property name="merchantid">
+                <column name="MERCHANTID" sql-type="number(10)" precision="10"/>
+            </key-property>
+        </composite-id>
+        <property name="statusdate">
+            <column name="STATUSDATE" sql-type="date" not-null="true"/>
+        </property>
+        <property name="receiveddate">
+            <column name="RECEIVEDDATE" sql-type="date"/>
+        </property>
+        <property name="amount">
+            <column name="AMOUNT" sql-type="number(14,2)" precision="14" scale="2" not-null="true"/>
+        </property>
+        <property name="currencycode">
+            <column name="CURRENCYCODE" sql-type="varchar2(3)" length="3" not-null="true"/>
+        </property>
+        <property name="surname">
+            <column name="SURNAME" sql-type="varchar2(35)" length="35" not-null="true"/>
+        </property>
+        <property name="city">
+            <column name="CITY" sql-type="varchar2(40)" length="40" not-null="true"/>
+        </property>
+        <property name="resellerid">
+            <column name="RESELLERID" sql-type="number(10)" precision="10" not-null="true"/>
+        </property>
+        <property name="resellermerchantid">
+            <column name="RESELLERMERCHANTID" sql-type="varchar2(50)" length="50" not-null="true"/>
+        </property>
+        <property name="customerid">
+            <column name="CUSTOMERID" sql-type="varchar2(15)" length="15" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="EMAIL" sql-type="varchar2(70)" length="70" not-null="true"/>
+        </property>
+        <property name="firstname">
+            <column name="FIRSTNAME" sql-type="varchar2(15)" length="15" not-null="true"/>
+        </property>
+        <property name="prefixsurname">
+            <column name="PREFIXSURNAME" sql-type="varchar2(15)" length="15" not-null="true"/>
+        </property>
+        <property name="title">
+            <column name="TITLE" sql-type="varchar2(35)" length="35" not-null="true"/>
+        </property>
+        <property name="companyname">
+            <column name="COMPANYNAME" sql-type="varchar2(40)" length="40" not-null="true"/>
+        </property>
+        <property name="companydata">
+            <column name="COMPANYDATA" sql-type="varchar2(50)" length="50" not-null="true"/>
+        </property>
+        <property name="description">
+            <column name="DESCRIPTION" sql-type="varchar2(100)" length="100" not-null="true"/>
+        </property>
+        <property name="street">
+            <column name="STREET" sql-type="varchar2(50)" length="50" not-null="true"/>
+        </property>
+        <property name="housenumber">
+            <column name="HOUSENUMBER" sql-type="varchar2(15)" length="15" not-null="true"/>
+        </property>
+        <property name="additionaladdressinfo">
+            <column name="ADDITIONALADDRESSINFO" sql-type="varchar2(50)" length="50" not-null="true"/>
+        </property>
+        <property name="zip">
+            <column name="ZIP" sql-type="varchar2(10)" length="10" not-null="true"/>
+        </property>
+        <property name="state">
+            <column name="STATE" sql-type="varchar2(35)" length="35" not-null="true"/>
+        </property>
+        <property name="sex">
+            <column name="SEX" sql-type="varchar2(1)" length="1" not-null="true"/>
+        </property>
+        <property name="vatnumber">
+            <column name="VATNUMBER" sql-type="varchar2(17)" length="17" not-null="true"/>
+        </property>
+        <property name="phonenumber">
+            <column name="PHONENUMBER" sql-type="varchar2(20)" length="20" not-null="true"/>
+        </property>
+        <property name="faxnumber">
+            <column name="FAXNUMBER" sql-type="varchar2(20)" length="20" not-null="true"/>
+        </property>
+        <property name="amountsign">
+            <column name="AMOUNTSIGN" sql-type="varchar2(1)" length="1" not-null="true"/>
+        </property>
+        <property name="amountpaid">
+            <column name="AMOUNTPAID" sql-type="number(12)" precision="12" not-null="true"/>
+        </property>
+        <property name="currencypaid">
+            <column name="CURRENCYPAID" sql-type="varchar2(3)" length="3" not-null="true"/>
+        </property>
+        <property name="indicationtest">
+            <column name="INDICATIONTEST" sql-type="number(1)" precision="1" not-null="true"/>
+        </property>
+        <property name="invoicenumber">
+            <column name="INVOICENUMBER" sql-type="varchar2(20)" length="20" not-null="true"/>
+        </property>
+        <property name="invoicetype">
+            <column name="INVOICETYPE" sql-type="varchar2(2)" length="2" not-null="true"/>
+        </property>
+        <property name="invoicedate">
+            <column name="INVOICEDATE" sql-type="date" not-null="true"/>
+        </property>
+        <property name="invoiceclass">
+            <column name="INVOICECLASS" sql-type="varchar2(10)" length="10" not-null="true"/>
+        </property>
+        <property name="orderdate">
+            <column name="ORDERDATE" sql-type="date" not-null="true"/>
+        </property>
+        <property name="textqualifier1">
+            <column name="TEXTQUALIFIER1" sql-type="varchar2(10)" length="10" not-null="true"/>
+        </property>
+        <property name="ipaddressmerchant">
+            <column name="IPADDRESSMERCHANT" sql-type="varchar2(45)" length="45" not-null="true"/>
+        </property>
+        <property name="ipaddresscustomer">
+            <column name="IPADDRESSCUSTOMER" sql-type="varchar2(45)" length="45" not-null="true"/>
+        </property>
+        <property name="merchantreference">
+            <column name="MERCHANTREFERENCE" sql-type="varchar2(50)" length="50" not-null="true"/>
+        </property>
+        <property name="ordertype">
+            <column name="ORDERTYPE" sql-type="number(5)" precision="5" not-null="true"/>
+        </property>
+        <property name="additionaldata">
+            <column name="ADDITIONALDATA" sql-type="varchar2(500)" length="500" not-null="true"/>
+        </property>
+        <property name="birthdate">
+            <column name="BIRTHDATE" sql-type="date" not-null="true"/>
+        </property>
+        <property name="textqualifier2">
+            <column name="TEXTQUALIFIER2" sql-type="varchar2(10)" length="10" not-null="true"/>
+        </property>
+        <property name="textqualifier3">
+            <column name="TEXTQUALIFIER3" sql-type="varchar2(10)" length="10" not-null="true"/>
+        </property>
+        <property name="stepweek">
+            <column name="STEPWEEK" sql-type="number(10)" precision="10" not-null="true"/>
+        </property>
+        <property name="stepmonth">
+            <column name="STEPMONTH" sql-type="number(10)" precision="10" not-null="true"/>
+        </property>
+        <property name="matchdayofweek">
+            <column name="MATCHDAYOFWEEK" sql-type="varchar2(64)" length="64" not-null="true"/>
+        </property>
+        <property name="matchdayofmonth">
+            <column name="MATCHDAYOFMONTH" sql-type="varchar2(64)" length="64" not-null="true"/>
+        </property>
+        <property name="startdate">
+            <column name="STARTDATE" sql-type="date" not-null="true"/>
+        </property>
+        <property name="enddate">
+            <column name="ENDDATE" sql-type="date" not-null="true"/>
+        </property>
+        <property name="numberofpayments">
+            <column name="NUMBEROFPAYMENTS" sql-type="number(5)" precision="5" not-null="true"/>
+        </property>
+        <property name="lastdate">
+            <column name="LASTDATE" sql-type="date" not-null="true"/>
+        </property>
+        <property name="nextdate">
+            <column name="NEXTDATE" sql-type="date" not-null="true"/>
+        </property>
+        <property name="numberofpaymentsdone">
+            <column name="NUMBEROFPAYMENTSDONE" sql-type="number(5)" precision="5" not-null="true"/>
+        </property>
+        <property name="mac">
+            <column name="MAC" sql-type="varchar2(32)" length="32" not-null="true"/>
+        </property>
+        <property name="feedbackstatus">
+            <column name="FEEDBACKSTATUS" sql-type="number(1)" precision="1" not-null="true"/>
+        </property>
+        <property name="mandate">
+            <column name="MANDATE" sql-type="varchar2(10)" length="10" not-null="true"/>
+        </property>
+        <property name="emailtypeindicator">
+            <column name="EMAILTYPEINDICATOR" sql-type="number(1)" precision="1" not-null="true"/>
+        </property>
+        <property name="overwritepaymentreference">
+            <column name="OVERWRITEPAYMENTREFERENCE" sql-type="varchar2(20)" length="20" not-null="true"/>
+        </property>
+        <property name="shippingtitle">
+            <column name="SHIPPINGTITLE" sql-type="varchar2(35)" length="35" not-null="true"/>
+        </property>
+        <property name="shippingsex">
+            <column name="SHIPPINGSEX" sql-type="varchar2(1)" length="1" not-null="true"/>
+        </property>
+        <property name="shippingfirstname">
+            <column name="SHIPPINGFIRSTNAME" sql-type="varchar2(15)" length="15" not-null="true"/>
+        </property>
+        <property name="shippingprefixsurname">
+            <column name="SHIPPINGPREFIXSURNAME" sql-type="varchar2(15)" length="15" not-null="true"/>
+        </property>
+        <property name="shippingsurname">
+            <column name="SHIPPINGSURNAME" sql-type="varchar2(35)" length="35" not-null="true"/>
+        </property>
+        <property name="shippingstreet">
+            <column name="SHIPPINGSTREET" sql-type="varchar2(50)" length="50" not-null="true"/>
+        </property>
+        <property name="shippinghousenumber">
+            <column name="SHIPPINGHOUSENUMBER" sql-type="varchar2(15)" length="15" not-null="true"/>
+        </property>
+        <property name="shippingadditionaladdressinfo">
+            <column name="SHIPPINGADDITIONALADDRESSINFO" sql-type="varchar2(50)" length="50" not-null="true"/>
+        </property>
+        <property name="shippingzip">
+            <column name="SHIPPINGZIP" sql-type="varchar2(10)" length="10" not-null="true"/>
+        </property>
+        <property name="shippingcity">
+            <column name="SHIPPINGCITY" sql-type="varchar2(40)" length="40" not-null="true"/>
+        </property>
+        <property name="shippingstate">
+            <column name="SHIPPINGSTATE" sql-type="varchar2(35)" length="35" not-null="true"/>
+        </property>
+        <property name="descriptor">
+            <column name="DESCRIPTOR" sql-type="varchar2(256)" length="256" not-null="true"/>
+        </property>
+        <property name="amountrefunded">
+            <column name="AMOUNTREFUNDED" sql-type="number(14,2)" precision="14" scale="2" not-null="true"/>
+        </property>
+        <property name="airlinefields">
+            <column name="AIRLINEFIELDS" sql-type="varchar2(4000)" length="4000" not-null="true"/>
+        </property>
+        <property name="totalamountpaid">
+            <column name="TOTALAMOUNTPAID" sql-type="number(16)" precision="16" not-null="true"/>
+        </property>
+        <property name="totalamountrefunded">
+            <column name="TOTALAMOUNTREFUNDED" sql-type="number(16)" precision="16" not-null="true"/>
+        </property>
+        <property name="additionalfrauddata">
+            <column name="ADDITIONALFRAUDDATA" sql-type="varchar2(250)" length="250" not-null="true"/>
+        </property>
+        <property name="riskproducts">
+            <column name="RISKPRODUCTS" sql-type="varchar2(100)" length="100" not-null="true"/>
+        </property>
+        <property name="riskservices">
+            <column name="RISKSERVICES" sql-type="varchar2(100)" length="100" not-null="true"/>
+        </property>
+        <property name="riskservicefilter">
+            <column name="RISKSERVICEFILTER" sql-type="varchar2(100)" length="100" not-null="true"/>
+        </property>
+        <property name="reuseorderid">
+            <column name="REUSEORDERID" sql-type="number(10)" precision="10" not-null="true"/>
+        </property>
+        <property name="reuseeffortid">
+            <column name="REUSEEFFORTID" sql-type="number(5)" precision="5" not-null="true"/>
+        </property>
+        <property name="reuseattemptid">
+            <column name="REUSEATTEMPTID" sql-type="number(5)" precision="5" not-null="true"/>
+        </property>
+        <property name="reusecustomerid">
+            <column name="REUSECUSTOMERID" sql-type="varchar2(15)" length="15" not-null="true"/>
+        </property>
+        <property name="reusemerchantreference">
+            <column name="REUSEMERCHANTREFERENCE" sql-type="varchar2(50)" length="50" not-null="true"/>
+        </property>
+        <property name="statecode">
+            <column name="STATECODE" sql-type="varchar2(9)" length="9" not-null="true"/>
+        </property>
+        <property name="numberofinstallments">
+            <column name="NUMBEROFINSTALLMENTS" sql-type="number(5)" precision="5" not-null="true"/>
+        </property>
+        <property name="purchasetype">
+            <column name="PURCHASETYPE" sql-type="number(1)" precision="1" not-null="true"/>
+        </property>
+        <property name="usagetype">
+            <column name="USAGETYPE" sql-type="number(1)" precision="1" not-null="true"/>
+        </property>
+        <property name="hostedindicator">
+            <column name="HOSTEDINDICATOR" sql-type="varchar2(1)" length="1" not-null="true"/>
+        </property>
+        <property name="returnurl">
+            <column name="RETURNURL" sql-type="varchar2(512)" length="512" not-null="true"/>
+        </property>
+        <property name="devicetype">
+            <column name="DEVICETYPE" sql-type="varchar2(1)" length="1" not-null="true"/>
+        </property>
+        <property name="customerreference">
+            <column name="CUSTOMERREFERENCE" sql-type="varchar2(17)" length="17" not-null="true"/>
+        </property>
+        <property name="taxamount">
+            <column name="TAXAMOUNT" sql-type="number(12)" precision="12" not-null="true"/>
+        </property>
+        <property name="dutyamount">
+            <column name="DUTYAMOUNT" sql-type="number(12)" precision="12" not-null="true"/>
+        </property>
+        <property name="discountamount">
+            <column name="DISCOUNTAMOUNT" sql-type="number(12)" precision="12" not-null="true"/>
+        </property>
+        <property name="shippingamount">
+            <column name="SHIPPINGAMOUNT" sql-type="number(12)" precision="12" not-null="true"/>
+        </property>
+        <property name="merchantorderid">
+            <column name="MERCHANTORDERID" sql-type="number(10)" precision="10" not-null="true"/>
+        </property>
+        <property name="customercontractidentifier">
+            <column name="CUSTOMERCONTRACTIDENTIFIER" sql-type="varchar2(35)" length="35" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
